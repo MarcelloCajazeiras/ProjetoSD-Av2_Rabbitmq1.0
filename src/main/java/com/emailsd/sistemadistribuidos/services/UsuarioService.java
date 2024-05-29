@@ -35,7 +35,7 @@ public class UsuarioService {
         usuario.setEndereco(userDetails.getEndereco());
 
         Usuario updatedUsuario = userRepository.save(usuario);
-        String mensagem = updatedUsuario.getEmail()+ "=" + "Dados Atualizados com Sucesso";
+        String mensagem = updatedUsuario.getEmail();
         rabbitTemplate.convertAndSend("user.Exchange","user.update.Details",mensagem);
         return updatedUsuario;
     }

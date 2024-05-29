@@ -1,7 +1,7 @@
 package com.emailsd.sistemadistribuidos.controllers;
 
-import com.sistemaDistribuidos.email.model.Usuario;
-import com.sistemaDistribuidos.email.service.UserService;
+import com.emailsd.sistemadistribuidos.models.Usuario;
+import com.emailsd.sistemadistribuidos.services.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +13,7 @@ import java.util.List;
 public class UsuarioController {
 
     @Autowired
-    private UserService userService;
+    private UsuarioService userService;
 
     @PostMapping
     public ResponseEntity<Usuario> createUser(@RequestBody Usuario user) {

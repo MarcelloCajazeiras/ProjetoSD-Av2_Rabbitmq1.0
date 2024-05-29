@@ -14,6 +14,10 @@ public class Endereco implements Serializable {
     private String cep;
     private String numero;
 
+    public Endereco() {
+
+    }
+
     public String getRua() {
         return rua;
     }
